@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Як масштабувати Google Shopping на +20-30% без ризику | GetProfit</title>
+    <meta name="description" content="Дізнайтеся які товари зливають ваш бюджет і як безпечно масштабуватися. Безкоштовний мануал + персональний аналіз для магазинів з 1,000+ товарів.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero .value-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .value-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-size: 16px;
+        }
+
+        .value-badge strong {
+            display: block;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: white;
+            max-width: 600px;
+            margin: -60px auto 0;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .form-section h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-section .subtitle {
+            color: var(--text-gray);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .simple-form input[type="email"] {
+            width: 100%;
+            padding: 18px 20px;
+            font-size: 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .simple-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .simple-form button {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .simple-form button:hover {
+            background: var(--primary-dark);
+        }
+
+        .form-note {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        /* Report Preview Section */
+        .report-preview-section {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .report-preview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .report-image {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .report-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .report-highlights h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-item {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .highlight-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .highlight-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .highlight-item small {
+            color: var(--text-gray);
+        }
+
+        .value-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .value-highlight strong {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Process Timeline */
+        .process-section {
+            padding: 80px 20px;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .timeline-step:nth-child(even) .step-content {
+            order: 2;
+        }
+
+        .timeline-step:nth-child(even) .step-icon {
+            order: 1;
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .step-content {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .step-day {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .step-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .step-time {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .step-optional {
+            background: #fef3c7;
+            border: 2px dashed var(--warning-color);
+        }
+
+        /* ROI Calculator */
+        .calculator-section {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .calculator {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .calculator label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .calculator input {
+            width: 100%;
+            padding: 18px 20px;
+            font-size: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .calculator button {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background: var(--primary-dark);
+        }
+
+        .calculator-results {
+            margin-top: 40px;
+            display: none;
+        }
+
+        .calculator-results.show {
+            display: block;
+        }
+
+        .result-item {
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .result-item.negative {
+            background: #fee2e2;
+            border-left: 4px solid var(--danger-color);
+        }
+
+        .result-item.opportunity {
+            background: #fef3c7;
+            border-left: 4px solid var(--warning-color);
+        }
+
+        .result-item.positive {
+            background: #d1fae5;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .result-item strong {
+            font-size: 24px;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .result-item small {
+            color: var(--text-gray);
+        }
+
+        .total-impact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .total-impact h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .impact-row {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .impact-row:last-child {
+            border-bottom: none;
+        }
+
+        .impact-row.highlight {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .cta-large {
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .cta-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Social Proof */
+        .social-proof-section {
+            padding: 80px 20px;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .testimonial .company {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .testimonial .stats {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial .findings {
+            background: #fef3c7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial .findings h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial .results {
+            background: #d1fae5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .testimonial .results h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .footer-cta button {
+            padding: 20px 50px;
+            font-size: 20px;
+            font-weight: 600;
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .footer-cta button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .report-preview {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 40px;
+            }
+
+            .timeline-step {
+                grid-template-columns: 1fr;
+                padding-left: 100px;
+            }
+
+            .timeline-step:nth-child(even) .step-content {
+                order: 1;
+            }
+
+            .timeline-step:nth-child(even) .step-icon {
+                order: 1;
+            }
+
+            .step-icon {
+                position: absolute;
+                left: 0;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Масштабуйте Google Shopping на +20-30% безпечно</h1>
+            <h2>Дізнайтеся які товари готові до масштабування ЗАРАЗ<br>+ отримайте персональний план дій для вашого магазину</h2>
+
+            <div class="value-badges">
+                <div class="value-badge">
+                    <strong>20-30%</strong>
+                    Типове зростання обігу
+                </div>
+                <div class="value-badge">
+                    <strong>40,000+ грн</strong>
+                    Середня економія/міс
+                </div>
+                <div class="value-badge">
+                    <strong>48 годин</strong>
+                    Безкоштовний аналіз
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <h3>📄 Отримайте безкоштовний мануал</h3>
+        <p class="subtitle">7 способів знайти товари які зливають бюджет<br>(і як безпечно масштабуватися)</p>
+
+        <form class="simple-form" id="leadForm">
+            <input
+                type="email"
+                name="email"
+                placeholder="Ваш email"
+                required
+                id="emailInput"
+            >
+            <button type="submit">Скачати мануал безкоштовно →</button>
+        </form>
+
+        <p class="form-note">
+            📩 Мануал отримаєте одразу на email<br>
+            🎁 Хочете персональний аналіз вашого акаунту? Залиште заявку на наступній сторінці
+        </p>
+    </section>
+
+    <!-- Report Preview Section -->
+    <section class="report-preview-section">
+        <div class="container">
+            <h2 class="section-title">📊 Що ви отримаєте</h2>
+            <p class="section-subtitle">Не просто generic поради, а персональний аналіз ВАШОГО магазину</p>
+
+            <div class="report-preview">
+                <div class="report-image">
+                    <!-- Placeholder for report screenshot -->
+                    <div style="background: #f3f4f6; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #9ca3af;">
+                        [Приклад звіту]<br>
+                        <small>Додайте скриншот звіту тут</small>
+                    </div>
+                </div>
+
+                <div class="report-highlights">
+                    <h3>14-сторінковий персональний звіт включає:</h3>
+
+                    <div class="highlight-item">
+                        <strong>Аналіз ВАШОГО асортименту</strong>
+                        <small>Конкретні SKU та назви товарів з вашого магазину</small>
+                    </div>
+
+                    <div class="highlight-item">
+                        <strong>Сегментація товарів:</strong>
+                        <small>🔴 LOSERS які зливають бюджет (з сумами)<br>
+                        🟡 POTENTIALS недофінансовані (упущений обіг)<br>
+                        🟢 WINNERS готові до масштабування</small>
+                    </div>
+
+                    <div class="highlight-item">
+                        <strong>Фінансовий аналіз</strong>
+                        <small>Потенційна економія та упущений обіг (в гривнях)</small>
+                    </div>
+
+                    <div class="highlight-item">
+                        <strong>Персональний план дій</strong>
+                        <small>Які товари виключити, на які збільшити бюджет, як масштабуватися на +20-30%</small>
+                    </div>
+
+                    <div class="highlight-item">
+                        <strong>Бенчмарки індустрії</strong>
+                        <small>Ваш ROAS vs середній показник по вашій категорії</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="value-highlight">
+                <strong>Середній результат:</strong>
+                Клієнти знаходять 20-30% бюджету який зливається на losers<br>
+                = Економія 40,000-70,000 грн/місяць
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">🎯 Як це працює</h2>
+            <p class="section-subtitle">Простий і прозорий процес</p>
+
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-icon">📧</div>
+                    <div class="step-content">
+                        <div class="step-day">День 1</div>
+                        <h3>Ви залишаєте email</h3>
+                        <p>Заповнюєте просту форму вгорі сторінки</p>
+                        <div class="step-time">⏱ Час: 30 секунд</div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-icon">📄</div>
+                    <div class="step-content">
+                        <div class="step-day">Одразу</div>
+                        <h3>Отримуєте мануал</h3>
+                        <p>PDF "7 способів знайти товари які зливають бюджет" на ваш email</p>
+                        <div class="step-time">✨ Можете одразу застосувати поради</div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-icon">🎁</div>
+                    <div class="step-content step-optional">
+                        <div class="step-day">Опціонально</div>
+                        <h3>Запитуєте персональний аналіз</h3>
+                        <p>Якщо хочете конкретні дані по ВАШОМУ акаунту замість generic порад</p>
+                        <div class="step-time">📋 Потрібно: 1,000+ товарів, Google Shopping 2+ міс, 150k+ грн/міс</div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-icon">📞</div>
+                    <div class="step-content">
+                        <div class="step-day">Протягом 24 год</div>
+                        <h3>Ми телефонуємо</h3>
+                        <p>Короткий дзвінок для уточнення деталей та запиту view-only доступу</p>
+                        <div class="step-time">⏱ Час: 5-10 хвилин</div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-icon">🤖</div>
+                    <div class="step-content">
+                        <div class="step-day">День 1-2</div>
+                        <h3>Автоматичний аналіз</h3>
+                        <p>Наша система аналізує ваш Google Ads акаунт</p>
+                        <div class="step-time">💡 Вам нічого не потрібно робити</div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-icon">📊</div>
+                    <div class="step-content">
+                        <div class="step-day">День 2</div>
+                        <h3>Отримуєте звіт</h3>
+                        <p>14-сторінковий PDF з персональними даними вашого магазину</p>
+                        <div class="step-time">🎁 + Запрошення на 30-хв розбір з експертом</div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-icon">👨‍💼</div>
+                    <div class="step-content step-optional">
+                        <div class="step-day">День 3-5</div>
+                        <h3>Розбір з експертом (опціонально)</h3>
+                        <p>Пояснюємо звіт, відповідаємо на питання, допомагаємо з впровадженням</p>
+                        <div class="step-time">⏱ Час: 30 хвилин</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="value-highlight" style="margin-top: 50px;">
+                <strong>Загальний час з вашого боку:</strong> 35-40 хвилин (не 3-4 години!)<br><br>
+                <strong>Зобов'язання:</strong> Жодних! Не потрібно підключатися до GetProfit.
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="calculator-section">
+        <div class="container">
+            <h2 class="section-title">💰 Скільки ви зможете заощадити?</h2>
+            <p class="section-subtitle">Розрахуйте ваш потенціал за 30 секунд</p>
+
+            <div class="calculator">
+                <label for="budget">Ваш місячний бюджет в Google Shopping:</label>
+                <input
+                    type="number"
+                    id="budget"
+                    placeholder="Наприклад: 200000"
+                    min="0"
+                >
+
+                <button onclick="calculateROI()">Розрахувати потенціал →</button>
+
+                <div class="calculator-results" id="results">
+                    <h3 style="margin-bottom: 20px;">📊 Типовий результат для магазину з бюджетом <span id="budget-display"></span> грн/міс:</h3>
+
+                    <div class="result-item negative">
+                        ❌ Зливається на товари-losers:<br>
+                        <strong id="waste"></strong> грн/міс (20%)
+                        <small>Товари з ROAS &lt;2x які не окупаються</small>
+                    </div>
+
+                    <div class="result-item opportunity">
+                        🟡 Упущений потенціал:<br>
+                        <strong id="missed"></strong> грн обігу/міс
+                        <small>Товари-потенціали які недофінансовані</small>
+                    </div>
+
+                    <div class="result-item positive">
+                        ✅ Можливість масштабування winners:<br>
+                        +<strong id="scale"></strong> грн обігу/міс (+30%)
+                        <small>Товари з ROAS &gt;5x готові до росту</small>
+                    </div>
+
+                    <div class="total-impact">
+                        <h4>📈 Загальний потенціал після оптимізації:</h4>
+
+                        <div class="impact-row">
+                            Економія: <strong id="savings"></strong> грн/міс = <strong id="savings-year"></strong> грн/рік
+                        </div>
+
+                        <div class="impact-row">
+                            Додатковий обіг: <strong id="revenue"></strong> грн/міс = <strong id="revenue-year"></strong> грн/рік
+                        </div>
+
+                        <div class="impact-row highlight">
+                            ROAS покращення:<br>
+                            Ваш поточний ~4.5x → Потенціал <strong>5.7x</strong> (+27% ефективність)
+                        </div>
+
+                        <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;">
+                            * Розрахунок базується на статистиці 200+ проаналізованих магазинів
+                        </p>
+
+                        <button class="cta-large" onclick="scrollToForm()">
+                            Дізнатися МІЙ точний потенціал →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof-section">
+        <div class="container">
+            <h2 class="section-title">🎯 Результати клієнтів</h2>
+            <p class="section-subtitle">Реальні кейси після отримання персонального аналізу</p>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="company">Інтернет-магазин меблів</div>
+                    <div class="stats">2,000 товарів • Бюджет 200,000 грн/міс</div>
+
+                    <div class="findings">
+                        <h4>Що виявив аналіз:</h4>
+                        ❌ 370 товарів-losers зливали 30,000 грн/міс<br>
+                        🟡 180 potentials недофінансовані (упущено 720k грн обігу)<br>
+                        ✅ 450 winners готові до +30% масштабування
+                    </div>
+
+                    <div class="results">
+                        <h4>Результат після впровадження:</h4>
+                        → Економія 100,000 грн за 3 місяці<br>
+                        → ROAS виріс з 4.2x до 5.8x<br>
+                        → Обіг +35%
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="company">Магазин електроніки</div>
+                    <div class="stats">3,500 товарів • Бюджет 350,000 грн/міс</div>
+
+                    <div class="findings">
+                        <h4>Що виявив аналіз:</h4>
+                        ❌ 520 товарів зливали через застарілі ціни<br>
+                        🟡 280 bestsellers недофінансовані<br>
+                        ✅ Знайдено нішу з ROAS 8.5x
+                    </div>
+
+                    <div class="results">
+                        <h4>Результат після оптимізації:</h4>
+                        → Економія 75,000 грн/міс<br>
+                        → Створено окрему кампанію для ніші<br>
+                        → Загальний ROAS: 4.8x → 6.2x
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="company">Fashion e-commerce</div>
+                    <div class="stats">5,000+ товарів • Бюджет 500,000 грн/міс</div>
+
+                    <div class="findings">
+                        <h4>Що виявив аналіз:</h4>
+                        ❌ Seasonal товари не вимикалися (50k грн втрат)<br>
+                        🟡 Топ-100 товарів отримували лише 15% бюджету<br>
+                        ✅ Потенціал +40% масштабування
+                    </div>
+
+                    <div class="results">
+                        <h4>Результат:</h4>
+                        → Перерозподілено бюджет (топ-100 = 40%)<br>
+                        → Обіг +55% за 2 місяці<br>
+                        → ROAS стабільний 5.5x при зростанні
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">❓ Часті питання</h2>
+
+            <div class="faq">
+                <div class="faq-item">
+                    <h4>Що конкретно буде в персональному звіті?</h4>
+                    <p>
+                        14-сторінковий PDF з вашими даними:<br><br>
+                        • Список всіх товарів з ROAS кожного<br>
+                        • Сегментація: losers (ROAS &lt;2x), potentials (ROAS 2-4x), winners (ROAS &gt;5x)<br>
+                        • Скільки грн зливається на кожен loser<br>
+                        • Скільки грн упущено через недофінансування potentials<br>
+                        • План: які товари виключити, на які збільшити бюджет<br>
+                        • Прогноз результатів після оптимізації<br>
+                        • Бенчмарки по вашій категорії
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Чому потрібно 48 годин?</h4>
+                    <p>
+                        Ми не просто показуємо цифри з Google Ads (це можна за 5 хвилин).<br><br>
+
+                        Ми робимо глибокий аналіз:<br>
+                        • Завантажуємо дані за останні 90 днів<br>
+                        • Аналізуємо тренди кожного товару<br>
+                        • Шукаємо seasonality patterns<br>
+                        • Порівнюємо з бенчмарками індустрії<br>
+                        • Створюємо персональні рекомендації<br><br>
+
+                        Це займає 2-3 години ручної роботи аналітика + автоматичний процесинг.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Це безкоштовно назавжди?</h4>
+                    <p>
+                        Так! Аналіз абсолютно безкоштовний.<br><br>
+
+                        Ви отримаєте повний звіт і можете застосувати поради самостійно.
+                        Жодних зобов'язань підключатися до GetProfit.<br><br>
+
+                        Якщо після аналізу вам сподобається наш підхід і захочете автоматизувати
+                        оптимізацію — ми розповімо про GetProfit. Але це ОПЦІОНАЛЬНО.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Для кого підходить цей аналіз?</h4>
+                    <p>
+                        Ідеально підходить для інтернет-магазинів з:<br><br>
+
+                        ✓ Запущеним Google Shopping мінімум 2 місяці (потрібні дані для аналізу)<br>
+                        ✓ 1,000+ товарів в каталозі (чим більше, тим більше можливостей знайти)<br>
+                        ✓ Бюджетом від 150,000 грн/міс (при меншому бюджеті спочатку рекомендуємо мануал)<br>
+                        ✓ E-commerce (B2C), не B2B<br><br>
+
+                        Якщо у вас менше 1,000 товарів або менший бюджет — спочатку скачайте мануал
+                        і застосуйте поради самостійно.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Що потрібно з мого боку?</h4>
+                    <p>
+                        Мінімум дій:<br><br>
+
+                        1. Залишити email (30 секунд)<br>
+                        2. Якщо хочете персональний аналіз — залишити телефон та посилання на Google Ads<br>
+                        3. Відповісти на дзвінок (5-10 хвилин)<br>
+                        4. Надати view-only доступ до Google Ads<br>
+                        5. Отримати звіт та опціонально записатися на розбір<br><br>
+
+                        Загальний час: 35-40 хвилин<br>
+                        View-only доступ означає що ми ТІЛЬКИ дивимося дані, не можемо нічого змінити.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h2>Готові дізнатися які товари зливають ваш бюджет?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">
+                Скачайте мануал зараз або отримайте персональний аналіз безкоштовно
+            </p>
+            <button onclick="scrollToForm()">Отримати мануал + аналіз →</button>
+        </div>
+    </section>
+
+    <script>
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+
+            // Here you would normally send to your backend
+            // For now, redirect to thank you page
+            console.log('Email submitted:', email);
+
+            // Simulate sending email and redirect
+            alert('Дякуємо! Перевіряємо що мануал надіслано на ' + email);
+
+            // In production, redirect to thank-you page
+            // window.location.href = '/thank-you.html?email=' + encodeURIComponent(email);
+        });
+
+        // ROI Calculator
+        function calculateROI() {
+            const budget = parseInt(document.getElementById('budget').value);
+
+            if (!budget || budget < 0) {
+                alert('Будь ласка, введіть коректний бюджет');
+                return;
+            }
+
+            // Calculations based on average patterns
+            const waste = Math.round(budget * 0.20); // 20% на losers
+            const missed = Math.round(budget * 0.30 * 3); // 30% бюджета * ROAS 3x
+            const scale = Math.round(budget * 0.30 * 5); // 30% бюджета * ROAS 5x
+
+            const savings = waste;
+            const savingsYear = savings * 12;
+            const revenue = missed + scale;
+            const revenueYear = revenue * 12;
+
+            // Display
+            document.getElementById('budget-display').textContent = budget.toLocaleString();
+            document.getElementById('waste').textContent = waste.toLocaleString();
+            document.getElementById('missed').textContent = missed.toLocaleString();
+            document.getElementById('scale').textContent = scale.toLocaleString();
+            document.getElementById('savings').textContent = savings.toLocaleString();
+            document.getElementById('savings-year').textContent = savingsYear.toLocaleString();
+            document.getElementById('revenue').textContent = revenue.toLocaleString();
+            document.getElementById('revenue-year').textContent = revenueYear.toLocaleString();
+
+            document.getElementById('results').classList.add('show');
+
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Scroll to form
+        function scrollToForm() {
+            document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('emailInput').focus();
+        }
+
+        // Allow Enter key in budget input to calculate
+        document.getElementById('budget').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateROI();
+            }
+        });
+    </script>
+
+</body>
+</html>
