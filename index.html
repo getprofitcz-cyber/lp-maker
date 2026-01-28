@@ -1,185 +1,423 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Pages Maker - Список лендингов</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>GETPROFIT | Ефективний інструмент для інтернет-магазинів</title>
+    <meta name="description" content="Максимізуйте прибутки вашого інтернет-магазину за допомогою гнучкого розподілу рекламного бюджету. Сфокусуйтеся на сезонних і найприбутковіших товарах завдяки розумним кампаніям.">
+    <link rel="canonical" href="https://www.getprofit.co.ua/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="GETPROFIT | Ефективний інструмент для інтернет-магазинів">
+    <meta property="og:description" content="Максимізуйте прибутки вашого інтернет-магазину за допомогою гнучкого розподілу рекламного бюджету.">
+    <meta property="og:url" content="https://www.getprofit.co.ua/">
+    <meta property="og:site_name" content="GETPROFIT">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.getprofit.co.ua/assets/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GETPROFIT | Ефективний інструмент для інтернет-магазинів">
+    <meta name="twitter:description" content="Максимізуйте прибутки вашого інтернет-магазину за допомогою гнучкого розподілу рекламного бюджету.">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "WebSite",
+        "name": "GETPROFIT",
+        "url": "https://www.getprofit.co.ua",
+        "description": "Ефективний інструмент для інтернет-магазинів",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.getprofit.co.ua/?q={search_term}"
+            },
+            "query-input": "required name=search_term"
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 60px;
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .landing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .landing-card {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .landing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .landing-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .landing-card p {
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .landing-card .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.3s ease;
-        }
-
-        .landing-card .btn:hover {
-            opacity: 0.9;
-        }
-
-        .stats {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
-            color: white;
-            text-align: center;
-        }
-
-        .stats h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            color: white;
-            margin-top: 60px;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .landing-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    }
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T9NLBC7M');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="style" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🚀 Landing Pages Maker</h1>
-            <p>Все ваши лендинги в одном месте</p>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NLBC7M"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo" aria-label="GETPROFIT Головна">GETPROFIT</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Відкрити меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="/pricing.html">ЦІНИ</a></li>
+                <li><a href="/contacts.html">КОНТАКТИ</a></li>
+            </ul>
+            
+            <a href="#trial-form" class="cta-button">СПРОБУВАТИ БЕЗКОШТОВНО</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Ефективний інструмент для інтернет-магазинів, які хочуть заробляти.</h1>
+                    <p class="hero-subtitle">Максимізуйте прибутки вашого інтернет-магазину за допомогою гнучкого розподілу рекламного бюджету. Сфокусуйтеся на сезонних і найприбутковіших товарах завдяки розумним кампаніям.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="#trial-form" class="btn btn-primary">Щотижневий звіт</a>
+                        <p class="trial-info">30 днів безкоштовно</p>
+                        <p class="audit-info">Безкоштовний аудит Google Ads</p>
+                    </div>
+                    
+                    <p class="integration-info">Проста та швидка інтеграція для всіх платформ e-commerce</p>
+                </div>
+                
+                <div class="hero-video">
+                    <video autoplay loop muted playsinline class="algorithm-video">
+                        <source src="assets/images/video-algorithm.mp4" type="video/mp4">
+                        Ваш браузер не підтримує відео.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="clients">
+            <div class="container">
+                <h2>З нами вже працюють десятки інтернет-магазинів, і щодня ми аналізуємо понад 15 млн товарів</h2>
+                
+                <div class="clients-grid">
+                    <div class="client-item">
+                        <img src="assets/images/logo-giftlab.avif" alt="Giftlab.cz" loading="lazy">
+                        <p class="client-name">Giftlab.cz</p>
+                        <p class="client-category">меблі та декор</p>
+                    </div>
+                    
+                    <div class="client-item">
+                        <img src="assets/images/logo-resin-studio.avif" alt="Resin Studio" loading="lazy">
+                        <p class="client-name">Resin Studio</p>
+                        <p class="client-category">товари для творчості</p>
+                    </div>
+                    
+                    <div class="client-item">
+                        <img src="assets/images/logo-topk.avif" alt="Topk" loading="lazy">
+                        <p class="client-name">Topk</p>
+                        <p class="client-category">електроніка</p>
+                    </div>
+                    
+                    <div class="client-item">
+                        <img src="assets/images/logo-manol.avif" alt="Manol.cz" loading="lazy">
+                        <p class="client-name">Manol.cz</p>
+                        <p class="client-category">меблі</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems Section -->
+        <section class="problems">
+            <div class="container">
+                <h2>Як GETPROFIT вирішує ваші проблеми</h2>
+                
+                <div class="problems-grid">
+                    <div class="problem-item">
+                        <div class="problem-before">
+                            <div class="problem-before-label">БЕЗ GETPROFIT</div>
+                            <p>Як збільшити виторг e-shop'у? Відсутність чіткої стратегії розподілу бюджету.</p>
+                        </div>
+                        <div class="problem-arrow">→</div>
+                        <div class="problem-after">
+                            <div class="problem-after-label">З GETPROFIT</div>
+                            <p>Автоматичний розподіл бюджету на найприбутковіші товари та категорії.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-before">
+                            <div class="problem-before-label">БЕЗ GETPROFIT</div>
+                            <p>Збільшив бюджет, але продажі не зростають. Гроші витрачаються неефективно.</p>
+                        </div>
+                        <div class="problem-arrow">→</div>
+                        <div class="problem-after">
+                            <div class="problem-after-label">З GETPROFIT</div>
+                            <p>Оптимізація кампаній за маржою. Бюджет працює там, де він потрібен.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-before">
+                            <div class="problem-before-label">БЕЗ GETPROFIT</div>
+                            <p>Витрати на PPC високі, а повернення — нульове. Складно відстежувати ROI.</p>
+                        </div>
+                        <div class="problem-arrow">→</div>
+                        <div class="problem-after">
+                            <div class="problem-after-label">З GETPROFIT</div>
+                            <p>Прозорі звіти з PNO, ROAS та маржею. Контроль кожної гривні бюджету.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-before">
+                            <div class="problem-before-label">БЕЗ GETPROFIT</div>
+                            <p>Google Analytics, Google Ads, Merchant Center... Як з усім цим впоратися?</p>
+                        </div>
+                        <div class="problem-arrow">→</div>
+                        <div class="problem-after">
+                            <div class="problem-after-label">З GETPROFIT</div>
+                            <p>Єдина платформа для всіх даних. Інтеграція за 15 хвилин без програмістів.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics">
+            <div class="container">
+                <h2>Що ви, ймовірно, не знаєте про Google Ads</h2>
+                <p class="stats-intro">Ми проаналізували понад 15 млн товарів із бюджетом понад 3 млн доларів США</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">2-4 %</div>
+                        <p>товарів приносять понад 60 % прибутку</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">18 %</div>
+                        <p>позицій ймовірно збиткові</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">9–13 %</div>
+                        <p>товарів забезпечують 90 % виторгу</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">70 %</div>
+                        <p>не мають достатніх даних для оцінки ефективності</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Як GETPROFIT допомагає збільшити прибуток інтернет-магазину</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-item" data-number="01">
+                        <div class="feature-image">
+                            <img src="assets/images/pics1.avif" alt="Ефективна структура кампаній" loading="lazy">
+                        </div>
+                        <div class="feature-content">
+                            <span class="feature-tag">АВТОМАТИЗАЦІЯ</span>
+                            <h3>Ефективна структура кампаній</h3>
+                            <p>Отримайте контроль над бюджетом за типами товарів. Зменшіть витрати на нерентабельні позиції та сконцентруйте ресурси на тих, що приносять найбільше прибутку.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reverse" data-number="02">
+                        <div class="feature-content">
+                            <span class="feature-tag">ПРОГНОЗУВАННЯ</span>
+                            <h3>Сезонність під контролем</h3>
+                            <p>Кожен товар має свою сезонність — продається активно 2–5 місяців у році. Ми допоможемо вам правильно розподіляти бюджет у потрібний момент.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="assets/images/pics-3-season.avif" alt="Сезонність під контролем" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-number="03">
+                        <div class="feature-image">
+                            <img src="assets/images/pics2-paretto.avif" alt="Маржа — ключ до ефективності" loading="lazy">
+                        </div>
+                        <div class="feature-content">
+                            <span class="feature-tag">ОПТИМІЗАЦІЯ</span>
+                            <h3>Маржа — ключ до ефективності</h3>
+                            <p>У вас різні товари з різною націнкою. Кампанії повинні враховувати саме це, а не тільки ROAS чи PNO.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reverse" data-number="04">
+                        <div class="feature-content">
+                            <span class="feature-tag">СТРАТЕГІЯ</span>
+                            <h3>Розділяй і володарюй: акції</h3>
+                            <p>Не об'єднуйте знижки й повну ціну в одній кампанії. Знижені товари — окремо, з окремим PNO.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="assets/images/pics-4-poas.avif" alt="Розділяй і володарюй: акції" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-number="05">
+                        <div class="feature-image">
+                            <img src="assets/images/pics-6-stock.avif" alt="Контроль залишків на складі" loading="lazy">
+                        </div>
+                        <div class="feature-content">
+                            <span class="feature-tag">АНАЛІТИКА</span>
+                            <h3>Контроль залишків на складі</h3>
+                            <p>Товари в наявності збільшують конверсію у 2–4 рази. Аналізуйте, що потрібно тримати на складі саме зараз. Усе інше — витрати без результату.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reverse" data-number="06">
+                        <div class="feature-content">
+                            <span class="feature-tag">AI-DRIVEN</span>
+                            <h3>Рекомендовані ціни</h3>
+                            <p>Зниження ціни на кілька відсотків може суттєво підняти обіг. Ми підкажемо, які позиції потребують змін і на скільки.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="assets/images/pics-7-pricing.avif" alt="Рекомендовані ціни" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-number="07">
+                        <div class="feature-image">
+                            <img src="assets/images/pics-8-categories.avif" alt="Категорії та бренди-переможці" loading="lazy">
+                        </div>
+                        <div class="feature-content">
+                            <span class="feature-tag">ІНСАЙТИ</span>
+                            <h3>Категорії та бренди-переможці</h3>
+                            <p>Звіти в реальному часі допоможуть вам визначити, на чому варто зосередити увагу.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start Section -->
+        <section class="quick-start">
+            <div class="container">
+                <h2>Швидкий запуск — без програмістів</h2>
+                
+                <div class="quick-start-grid">
+                    <div class="quick-start-item">
+                        <div class="quick-start-icon">⏱️</div>
+                        <h3>Лише 15 хвилин</h3>
+                        <p>Запуск без технічних знань — без залучення розробників.</p>
+                    </div>
+                    
+                    <div class="quick-start-item">
+                        <div class="quick-start-icon">🔧</div>
+                        <h3>Працює з будь-якою платформою</h3>
+                        <p>Підходить для будь-якого рішення — від Open Source до кастомного.</p>
+                    </div>
+                    
+                    <div class="quick-start-item">
+                        <div class="quick-start-icon">⚡</div>
+                        <h3>Усе автоматично</h3>
+                        <p>Жодних зайвих інструментів. Алгоритм працює сам — ви отримуєте тільки звіти.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners">
+            <div class="container">
+                <h2>Ми — сертифіковані партнери</h2>
+                <p class="partners-intro">Ми — офіційні партнери Google з багаторічним досвідом. Також працюємо з платформами OpenCart, PrestaShop, Magento, WooCommerce, Prom.ua та іншими.</p>
+                
+                <div class="partners-logos">
+                    <img src="assets/images/logo-google-ads.avif" alt="Google Ads Partner" loading="lazy">
+                    <img src="assets/images/logo-google-developers.avif" alt="Google Developers Partner" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="trial-form">
+            <div class="container">
+                <h2>Готові збільшити прибуток вашого інтернет-магазину?</h2>
+                <p>Спробуйте GETPROFIT безкоштовно протягом 30 днів</p>
+                <a href="/contacts.html" class="btn btn-primary btn-large">Розпочати безкоштовний період</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GETPROFIT</h3>
+                    <p>©2022-2025. All right reserved</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Про сервіс</h4>
+                    <ul>
+                        <li><a href="/about.html">Про нас</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Інформація</h4>
+                    <ul>
+                        <li><a href="/pricing.html">Ціни</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms-and-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="/refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Контакти</h4>
+                    <ul>
+                        <li><a href="/contacts.html">Контакти</a></li>
+                        <li><a href="tel:+380734601975">Tel.: +380734601975</a></li>
+                        <li><a href="mailto:info@getprofit.pro">Mail: info@getprofit.pro</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <div class="landing-grid" id="landingGrid">
-            <!-- Лендинги будут добавлены автоматически -->
-        </div>
-
-        <div class="stats">
-            <h2 id="landingCount">0</h2>
-            <p>Активных лендингов</p>
-        </div>
-
-        <div class="footer">
-            <p>Автоматически деплоится на GitHub Pages и Cloudflare Pages</p>
-        </div>
-    </div>
-
-    <script>
-        const landings = [
-            {
-                title: 'Оптимизированный лендинг 2026',
-                description: 'Современный и оптимизированный лендинг с быстрой загрузкой и отличной конверсией.',
-                file: 'optimized-landing-2026.html'
-            },
-            {
-                title: 'Страница благодарности 2026',
-                description: 'Thank you page для подтверждения действий пользователей.',
-                file: 'thank-you-page-2026.html'
-            },
-            {
-                title: 'Промо страница',
-                description: 'Промо-лендинг для специальных предложений и акций.',
-                file: 'promo.html'
-            },
-            {
-                title: 'Приложение',
-                description: 'Интерактивное веб-приложение.',
-                file: 'app.html'
-            }
-        ];
-
-        const grid = document.getElementById('landingGrid');
-        const countElement = document.getElementById('landingCount');
-
-        landings.forEach(landing => {
-            const card = document.createElement('div');
-            card.className = 'landing-card';
-            card.innerHTML = `
-                <h3>${landing.title}</h3>
-                <p>${landing.description}</p>
-                <a href="${landing.file}" class="btn">Открыть лендинг →</a>
-            `;
-            grid.appendChild(card);
-        });
-
-        countElement.textContent = landings.length;
-    </script>
+    <!-- Scripts -->
+    <script defer src="assets/js/main.js"></script>
 </body>
 </html>
