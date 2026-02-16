@@ -13,15 +13,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5ZW3B925');</script>
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vc7s360r8s");
-    </script>
-
     <style>
         * {
             margin: 0;
@@ -2099,34 +2090,16 @@
         <form id="leadFormElement" action="https://hook.eu1.make.com/x7v7qun7m8mogbtm8d1dv7x833ydp23i" method="POST">
             <input type="hidden" name="form_name" value="personal_analysis_request">
 
+            <!-- UTM & Facebook tracking (populated by JS on page load) -->
+            <input type="hidden" name="utm_campaign" id="h_utm_campaign" value="">
+            <input type="hidden" name="utm_content" id="h_utm_content" value="">
+            <input type="hidden" name="fbclid" id="h_fbclid" value="">
+            <input type="hidden" name="fbc" id="h_fbc" value="">
+            <input type="hidden" name="fbp" id="h_fbp" value="">
+
             <!-- Honeypot field - hidden from humans, bots fill it -->
             <div style="position: absolute; left: -9999px;" aria-hidden="true">
                 <input type="text" name="company_fax" tabindex="-1" autocomplete="off">
-            </div>
-
-            <!-- Qualifying questions first -->
-            <div class="form-group">
-                <label for="has_google_ads">Чи є у вас Google Shopping або Performance Max? *</label>
-                <select id="has_google_ads" name="has_google_ads" required style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 1rem; background: white; cursor: pointer;">
-                    <option value="">— Оберіть варіант —</option>
-                    <option value="yes_shopping">Так, є Google Shopping</option>
-                    <option value="yes_pmax">Так, є Performance Max</option>
-                    <option value="yes_both">Так, є обидва</option>
-                    <option value="no_but_planning">Ні, але планую запустити</option>
-                    <option value="not_sure">Не впевнений / не знаю</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="monthly_budget">Скільки витрачаєте на Google Ads щомісяця? *</label>
-                <select id="monthly_budget" name="monthly_budget" required style="width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 1rem; background: white; cursor: pointer;">
-                    <option value="">— Оберіть бюджет —</option>
-                    <option value="under_20k">Менше 20 000 грн</option>
-                    <option value="20k_50k">20 000 - 50 000 грн</option>
-                    <option value="50k_100k">50 000 - 100 000 грн</option>
-                    <option value="100k_plus">Більше 100 000 грн</option>
-                    <option value="just_starting">Тільки планую запустити</option>
-                </select>
             </div>
 
             <div class="form-group">
@@ -2141,7 +2114,7 @@
 
             <div class="form-group">
                 <label for="website">Адреса вашого інтернет-магазину *</label>
-                <input type="url" id="website" name="website" required placeholder="https://yourshop.com">
+                <input type="text" id="website" name="website" required placeholder="yourshop.com">
             </div>
 
             <button type="submit" class="submit-btn">Отримати звіт безкоштовно →</button>
@@ -2425,15 +2398,44 @@
             }
         });
 
+        // --- Populate UTM & Facebook tracking hidden fields ---
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+
+            // UTM parameters
+            document.getElementById('h_utm_campaign').value = params.get('utm_campaign') || '';
+            document.getElementById('h_utm_content').value = params.get('utm_content') || '';
+
+            // Facebook click ID from URL
+            var fbclid = params.get('fbclid') || '';
+            document.getElementById('h_fbclid').value = fbclid;
+
+            // Facebook cookies
+            function getCookieValue(name) {
+                var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                return match ? match[2] : '';
+            }
+
+            var fbp = getCookieValue('_fbp');
+            var fbc = getCookieValue('_fbc');
+
+            // If _fbc cookie is empty but fbclid exists in URL, construct fbc manually
+            // Format: fb.1.{timestamp_ms}.{fbclid}
+            if (!fbc && fbclid) {
+                fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+            }
+
+            document.getElementById('h_fbc').value = fbc;
+            document.getElementById('h_fbp').value = fbp;
+        })();
+
         // GTM — form field focus tracking (progressive steps)
         window.dataLayer = window.dataLayer || [];
         var formStepTracked = {};
         var formFields = [
-            { id: 'has_google_ads', step: 'form_start', label: 'has_google_ads' },
-            { id: 'monthly_budget', step: 'form_step_2', label: 'monthly_budget' },
-            { id: 'email', step: 'form_step_3', label: 'email' },
-            { id: 'phone', step: 'form_step_4', label: 'phone' },
-            { id: 'website', step: 'form_step_5', label: 'website' }
+            { id: 'email', step: 'form_start', label: 'email' },
+            { id: 'phone', step: 'form_step_2', label: 'phone' },
+            { id: 'website', step: 'form_step_3', label: 'website' }
         ];
         formFields.forEach(function(f) {
             var el = document.getElementById(f.id);
@@ -2481,9 +2483,7 @@
             window.dataLayer.push({
                 'event': 'form_submit',
                 'form_name': 'personal_analysis_request',
-                'email': data.email,
-                'has_google_ads': data.has_google_ads,
-                'monthly_budget': data.monthly_budget
+                'email': data.email
             });
 
             // Push event_id for GTM Pixel deduplication
@@ -2575,7 +2575,10 @@
                 event_source_url: window.location.href,
                 user_data: {
                     fbp: getCookie('_fbp') || '',
-                    fbc: getCookie('_fbc') || ''
+                    fbc: getCookie('_fbc') || (function() {
+                        var fbclid = new URLSearchParams(window.location.search).get('fbclid');
+                        return fbclid ? 'fb.1.' + Date.now() + '.' + fbclid : '';
+                    })()
                 },
                 custom_data: customData || {}
             };
