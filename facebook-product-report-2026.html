@@ -2492,6 +2492,27 @@
                 'fb_event_id': leadEventId
             });
 
+            // Send lead notification to Telegram (fire-and-forget)
+            var tgPayload = JSON.stringify({
+                email: data.email,
+                phone: data.phone || '',
+                website: data.website || '',
+                form_name: data.form_name || '',
+                utm_campaign: data.utm_campaign || '',
+                utm_content: data.utm_content || ''
+            });
+            var TG_ENDPOINT = 'https://telegram-notify.getprofitcz.workers.dev/api/telegram-notify';
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(TG_ENDPOINT, new Blob([tgPayload], {type: 'application/json'}));
+            } else {
+                fetch(TG_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: tgPayload,
+                    keepalive: true
+                }).catch(function() {});
+            }
+
             // Submit to Make.com webhook
             fetch(this.action, {
                 method: 'POST',
