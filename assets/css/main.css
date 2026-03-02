@@ -1244,10 +1244,16 @@ img, video {
     margin-top: 0;
 }
 
+.legal-page .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: var(--spacing-md);
+}
+
 .legal-page table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: var(--spacing-md);
+    min-width: 480px;
 }
 
 .legal-page th, .legal-page td {
