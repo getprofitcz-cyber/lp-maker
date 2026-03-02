@@ -18,7 +18,7 @@
         j.async=true;
         j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
         f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T9NLBC7M');
+    })(window,document,'script','dataLayer','GTM-5ZW3B925');
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
 </head>
 <body>
     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NLBC7M"
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZW3B925"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
 
@@ -226,5 +226,85 @@
     </footer>
 
     <script defer src="assets/js/main.js"></script>
+
+    <!-- Facebook Conversion API client -->
+    <script>
+    (function() {
+        'use strict';
+        var CAPI_ENDPOINT = '/api/fb-capi';
+
+        function getCookie(name) {
+            var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+        }
+
+        function genEventId() {
+            return 'eid_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        function sendCAPI(eventName, userData, customData) {
+            var eventId = genEventId();
+            var payload = {
+                event_name: eventName,
+                event_id: eventId,
+                event_source_url: window.location.href,
+                user_data: {
+                    fbp: getCookie('_fbp') || '',
+                    fbc: getCookie('_fbc') || (function() {
+                        var fbclid = new URLSearchParams(window.location.search).get('fbclid');
+                        return fbclid ? 'fb.1.' + Date.now() + '.' + fbclid : '';
+                    })()
+                },
+                custom_data: customData || {}
+            };
+            if (userData) {
+                if (userData.email) payload.user_data.email = userData.email;
+                if (userData.phone) payload.user_data.phone = userData.phone;
+            }
+            var body = JSON.stringify(payload);
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(CAPI_ENDPOINT, new Blob([body], {type: 'application/json'}));
+            } else {
+                fetch(CAPI_ENDPOINT, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: body,
+                    keepalive: true
+                }).catch(function() {});
+            }
+            return eventId;
+        }
+
+        window.sendCAPI = sendCAPI;
+
+        // Auto-send PageView
+        var pvId = sendCAPI('PageView');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'event': 'capi_pageview', 'fb_event_id': pvId });
+    })();
+    </script>
+
+    <!-- CTA click tracking -->
+    <script>
+    (function() {
+        window.dataLayer = window.dataLayer || [];
+        document.querySelectorAll('a[href*="facebook-product-report"], a.cta-button').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var ctaLocation = 'unknown';
+                if (link.closest('.cta-section')) ctaLocation = 'bottom_cta';
+                else if (link.closest('.header, .nav')) ctaLocation = 'header_cta';
+                else if (link.closest('[class*="hero"]')) ctaLocation = 'hero_cta';
+                else ctaLocation = 'mid_page_cta';
+
+                window.dataLayer.push({
+                    'event': 'cta_click',
+                    'cta_location': ctaLocation,
+                    'cta_text': link.textContent.trim(),
+                    'cta_url': link.href
+                });
+            });
+        });
+    })();
+    </script>
 </body>
 </html>
