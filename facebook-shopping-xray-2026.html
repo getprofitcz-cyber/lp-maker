@@ -402,8 +402,17 @@
 
         @media (max-width: 768px) {
             .screenshot-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .screenshot-card-label {
+                padding: 10px 12px;
+            }
+            .screenshot-card-label h3 {
+                font-size: 0.8rem;
+            }
+            .screenshot-card-label span {
+                display: none;
             }
         }
 
