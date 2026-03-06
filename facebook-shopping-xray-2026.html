@@ -351,6 +351,8 @@
             margin: -30px auto 50px;
         }
 
+        .carousel-dots { display: none; }
+
         .screenshot-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -407,13 +409,17 @@
                 scroll-snap-type: x mandatory;
                 -webkit-overflow-scrolling: touch;
                 gap: 12px;
-                padding-bottom: 8px;
-                margin-bottom: 40px;
+                padding-bottom: 4px;
             }
             .screenshot-card {
-                flex: 0 0 75vw;
-                max-width: 75vw;
+                flex: 0 0 70vw;
+                max-width: 70vw;
                 scroll-snap-align: center;
+            }
+            .screenshot-card-img {
+                height: 180px;
+                object-fit: cover;
+                object-position: top left;
             }
             .screenshot-card:first-child {
                 margin-left: 4vw;
@@ -423,6 +429,23 @@
             }
             .screenshot-card-label span {
                 display: none;
+            }
+            .carousel-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 12px;
+            }
+            .carousel-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--color-border);
+                transition: background 0.2s, transform 0.2s;
+            }
+            .carousel-dot.active {
+                background: var(--color-primary);
+                transform: scale(1.25);
             }
         }
 
@@ -1196,6 +1219,14 @@
 
             </div>
 
+            <!-- Carousel dots (mobile only) -->
+            <div class="carousel-dots" id="carouselDots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+
             <!-- Image Lightbox -->
             <div class="lb-overlay" id="lbOverlay" onclick="if(event.target===this||event.target.classList.contains('lb-overlay'))closeLB()">
                 <button class="lb-close" onclick="closeLB()">&times;</button>
@@ -1215,12 +1246,17 @@
             var currentLB = 0;
 
             function openLB(i) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ 'event': 'lightbox_open', 'lightbox_slide': lbSlides[i].title });
+                // Mobile: open image in new tab for native pinch-to-zoom
+                if (window.innerWidth <= 768) {
+                    window.open(lbSlides[i].src, '_blank');
+                    return;
+                }
                 currentLB = i;
                 renderLB();
                 document.getElementById('lbOverlay').classList.add('active');
                 document.body.style.overflow = 'hidden';
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({ 'event': 'lightbox_open', 'lightbox_slide': lbSlides[i].title });
             }
 
             function closeLB() {
@@ -1249,6 +1285,23 @@
                 if (e.key === 'ArrowRight') goLB(currentLB + 1);
                 if (e.key === 'ArrowLeft') goLB(currentLB - 1);
             });
+
+            // Carousel dots sync on scroll
+            (function() {
+                var grid = document.querySelector('.screenshot-grid');
+                var dots = document.querySelectorAll('.carousel-dot');
+                if (!grid || !dots.length) return;
+                grid.addEventListener('scroll', function() {
+                    var cards = grid.querySelectorAll('.screenshot-card');
+                    var scrollLeft = grid.scrollLeft;
+                    var cardWidth = cards[0].offsetWidth + 12; // card + gap
+                    var idx = Math.round(scrollLeft / cardWidth);
+                    idx = Math.max(0, Math.min(idx, dots.length - 1));
+                    dots.forEach(function(d, i) {
+                        d.classList.toggle('active', i === idx);
+                    });
+                });
+            })();
             </script>
 
             <div style="text-align: center; margin-top: 40px;">
