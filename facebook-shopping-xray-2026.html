@@ -402,14 +402,24 @@
 
         @media (max-width: 768px) {
             .screenshot-grid {
-                grid-template-columns: repeat(2, 1fr);
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
                 gap: 12px;
+                padding-bottom: 8px;
+                margin-bottom: 40px;
             }
-            .screenshot-card-label {
-                padding: 10px 12px;
+            .screenshot-card {
+                flex: 0 0 75vw;
+                max-width: 75vw;
+                scroll-snap-align: center;
             }
-            .screenshot-card-label h3 {
-                font-size: 0.8rem;
+            .screenshot-card:first-child {
+                margin-left: 4vw;
+            }
+            .screenshot-card:last-child {
+                margin-right: 4vw;
             }
             .screenshot-card-label span {
                 display: none;
