@@ -86,7 +86,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="preload" as="style" href="/assets/css/main.css">
@@ -263,13 +263,14 @@
 
             <!-- Bottom CTA Form -->
             <div class="article-cta-section" data-section="final_cta" data-position="10">
-                <h2>Перевірте свій магазин безкоштовно</h2>
-                <p class="cta-subtitle">Отримайте Product Report — аналіз вашого Google Shopping за 20 секунд</p>
+                <h2>Перевір свій магазин безкоштовно</h2>
+                <p class="cta-subtitle">Отримай Product Report — аналіз твого Google Shopping за 20 секунд</p>
 
                 <form id="blogLeadForm" class="article-form" novalidate>
+                    <input type="text" name="name" placeholder="Ім'я" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="tel" name="phone" placeholder="Телефон">
-                    <input type="text" name="website" placeholder="Сайт вашого магазину" class="form-full" required>
+                    <input type="text" name="website" placeholder="Сайт твого магазину" class="form-full" required>
 
                     <!-- Hidden fields -->
                     <input type="hidden" name="form_name" value="blog_lead">
@@ -292,7 +293,7 @@
                 </form>
 
                 <p class="form-privacy">
-                    Натискаючи кнопку, ви погоджуєтесь з
+                    Натискаючи кнопку, ти погоджуєшся з
                     <a href="/privacy-policy.html">Політикою конфіденційності</a>
                 </p>
             </div>
@@ -303,7 +304,7 @@
     <!-- Sticky CTA Bar -->
     <div class="sticky-cta" aria-hidden="true">
         <div class="sticky-cta-inner">
-            <span class="sticky-cta-text">Дізнайтесь, як працює ваш Google Shopping</span>
+            <span class="sticky-cta-text">Дізнайся, як працює твій Google Shopping</span>
             <a href="#blogLeadForm" class="sticky-cta-btn" onclick="document.getElementById('blogLeadForm').scrollIntoView({behavior:'smooth'});return false;">
                 Безкоштовний аналіз
             </a>
