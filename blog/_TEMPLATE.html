@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta — REPLACE per article -->
+    <title>{{ARTICLE_TITLE}} | GETPROFIT Блог</title>
+    <meta name="description" content="{{META_DESCRIPTION — 150-160 chars}}">
+    <link rel="canonical" href="https://www.getprofit.co.ua/blog/{{SLUG}}.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ARTICLE_TITLE}}">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:url" content="https://www.getprofit.co.ua/blog/{{SLUG}}.html">
+    <meta property="og:site_name" content="GETPROFIT">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://www.getprofit.co.ua/blog/images/{{SLUG}}-og.jpg">
+    <meta property="article:published_time" content="{{YYYY-MM-DD}}">
+    <meta property="article:author" content="Vlad">
+    <meta property="article:section" content="{{CATEGORY}}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ARTICLE_TITLE}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{ARTICLE_TITLE}}",
+        "description": "{{META_DESCRIPTION}}",
+        "image": "https://www.getprofit.co.ua/blog/images/{{SLUG}}-og.jpg",
+        "author": {
+            "@type": "Person",
+            "name": "Vlad",
+            "url": "https://www.getprofit.co.ua/about.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "GETPROFIT",
+            "url": "https://www.getprofit.co.ua",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.getprofit.co.ua/assets/images/og-image.jpg"
+            }
+        },
+        "datePublished": "{{YYYY-MM-DD}}",
+        "dateModified": "{{YYYY-MM-DD}}",
+        "mainEntityOfPage": "https://www.getprofit.co.ua/blog/{{SLUG}}.html"
+    }
+    </script>
+
+    <!-- FAQ Schema — add per article if has FAQ section -->
+    <!--
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "{{Q1}}",
+                "acceptedAnswer": { "@type": "Answer", "text": "{{A1}}" }
+            }
+        ]
+    }
+    </script>
+    -->
+
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5ZW3B925');
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="preload" as="style" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body>
+    <!-- GTM noscript -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZW3B925"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo" aria-label="GETPROFIT Головна">GETPROFIT</a>
+
+            <button class="mobile-menu-toggle" aria-label="Відкрити меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="/blog/">БЛОГ</a></li>
+                <li><a href="/pricing.html">ЦІНИ</a></li>
+                <li><a href="/contacts.html">КОНТАКТИ</a></li>
+            </ul>
+
+            <a href="/facebook-product-report-2026.html" class="cta-button">РЕНТГЕН МАГАЗИНУ</a>
+        </nav>
+    </header>
+
+    <!-- Article Hero -->
+    <section class="article-hero" data-section="hero" data-position="1">
+        <div class="container">
+            <span class="article-hero-tag">{{CATEGORY}}</span>
+            <h1>{{ARTICLE_TITLE}}</h1>
+            <div class="article-hero-meta">
+                <div class="article-hero-author">
+                    <img src="/assets/images/author-vlad.jpg" alt="Vlad" width="40" height="40">
+                    <span>Vlad</span>
+                </div>
+                <span class="sep">&middot;</span>
+                <span>{{DATE_FORMATTED}}</span>
+                <span class="sep">&middot;</span>
+                <span>{{READ_TIME}} хв читання</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Body -->
+    <div class="article-wrapper">
+
+        <!-- TOC Sidebar -->
+        <aside class="article-toc" aria-label="Зміст статті">
+            <div class="article-toc-title">Зміст</div>
+            <ol class="article-toc-list">
+                <li><a href="#section-1">{{Section 1 title}}</a></li>
+                <li><a href="#section-2">{{Section 2 title}}</a></li>
+                <li><a href="#section-3">{{Section 3 title}}</a></li>
+                <li><a href="#section-4">{{Section 4 title}}</a></li>
+                <li><a href="#section-5">{{Section 5 title}}</a></li>
+                <li><a href="#section-6">{{Section 6 title}}</a></li>
+            </ol>
+        </aside>
+
+        <!-- Article Content -->
+        <article class="article-content">
+
+            <!-- Section 1 -->
+            <section data-section="intro" data-position="2">
+                <p class="lead">{{LEAD paragraph — hook the reader, 2-3 sentences}}</p>
+            </section>
+
+            <!-- Section 2 -->
+            <section data-section="section-1" data-position="3">
+                <h2 id="section-1">{{Section 1 heading}}</h2>
+                <p>{{Content}}</p>
+
+                <!-- Example: data highlight box -->
+                <div class="data-box">
+                    <div class="data-box-number">59.2%</div>
+                    <div class="data-box-label">товарів у середньому магазині — невидимі для покупців</div>
+                </div>
+
+                <p>{{More content}}</p>
+            </section>
+
+            <!-- Section 3 -->
+            <section data-section="section-2" data-position="4">
+                <h2 id="section-2">{{Section 2 heading}}</h2>
+                <p>{{Content}}</p>
+
+                <!-- Example: callout box -->
+                <div class="callout callout-insight">
+                    <div class="callout-title">Ключовий інсайт</div>
+                    <p>{{Insight text}}</p>
+                </div>
+
+                <p>{{More content}}</p>
+            </section>
+
+            <!-- Inline CTA -->
+            <a href="/facebook-product-report-2026.html?utm_source=blog&utm_medium=inline_cta&utm_content={{SLUG}}" class="cta-inline">
+                Отримати безкоштовний Product Report
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+
+            <!-- Section 4 -->
+            <section data-section="section-3" data-position="5">
+                <h2 id="section-3">{{Section 3 heading}}</h2>
+                <p>{{Content}}</p>
+
+                <!-- Example: before/after comparison -->
+                <div class="callout callout-warning">
+                    <div class="callout-title">Типова помилка</div>
+                    <p>{{Warning text}}</p>
+                </div>
+
+                <div class="callout callout-success">
+                    <div class="callout-title">Правильний підхід</div>
+                    <p>{{Success text}}</p>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section data-section="section-4" data-position="6">
+                <h2 id="section-4">{{Section 4 heading}}</h2>
+                <p>{{Content with case study data}}</p>
+
+                <!-- Example: blockquote from client -->
+                <blockquote>
+                    <p>{{Client quote — anonymized}}</p>
+                </blockquote>
+            </section>
+
+            <!-- Section 6 -->
+            <section data-section="section-5" data-position="7">
+                <h2 id="section-5">{{Section 5 heading}}</h2>
+                <p>{{Content}}</p>
+            </section>
+
+            <!-- Section 7 — Takeaways / Summary -->
+            <section data-section="takeaways" data-position="8">
+                <h2 id="section-6">{{Section 6 — Підсумки / Що робити далі}}</h2>
+                <ul>
+                    <li>{{Takeaway 1}}</li>
+                    <li>{{Takeaway 2}}</li>
+                    <li>{{Takeaway 3}}</li>
+                </ul>
+            </section>
+
+            <!-- Author Bio -->
+            <div class="author-bio" data-section="author" data-position="9">
+                <img src="/assets/images/author-vlad.jpg" alt="Vlad" class="author-bio-avatar" width="64" height="64">
+                <div>
+                    <div class="author-bio-name">Vlad</div>
+                    <div class="author-bio-role">Засновник GETPROFIT</div>
+                    <div class="author-bio-text">
+                        Оптимізую Google Shopping для інтернет-магазинів з 2018 року.
+                        Проаналізував 1.1M+ товарів у 122+ акаунтах.
+                        Будую алгоритми, які замінюють ручну роботу PPC-спеціаліста.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA Form -->
+            <div class="article-cta-section" data-section="final_cta" data-position="10">
+                <h2>Перевірте свій магазин безкоштовно</h2>
+                <p class="cta-subtitle">Отримайте Product Report — аналіз вашого Google Shopping за 20 секунд</p>
+
+                <form id="blogLeadForm" class="article-form" novalidate>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="text" name="website" placeholder="Сайт вашого магазину" class="form-full" required>
+
+                    <!-- Hidden fields -->
+                    <input type="hidden" name="form_name" value="blog_lead">
+                    <input type="hidden" name="utm_source" value="">
+                    <input type="hidden" name="utm_medium" value="">
+                    <input type="hidden" name="utm_campaign" value="">
+                    <input type="hidden" name="utm_content" value="">
+                    <input type="hidden" name="fbclid" value="">
+                    <input type="hidden" name="fbc" value="">
+                    <input type="hidden" name="fbp" value="">
+                    <input type="hidden" name="gclid" value="">
+                    <input type="hidden" name="article_slug" value="{{SLUG}}">
+
+                    <!-- Honeypot -->
+                    <div class="hp-field" aria-hidden="true">
+                        <input type="text" name="company_fax" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button type="submit">Отримати звіт безкоштовно</button>
+                </form>
+
+                <p class="form-privacy">
+                    Натискаючи кнопку, ви погоджуєтесь з
+                    <a href="/privacy-policy.html">Політикою конфіденційності</a>
+                </p>
+            </div>
+
+        </article>
+    </div>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta" aria-hidden="true">
+        <div class="sticky-cta-inner">
+            <span class="sticky-cta-text">Дізнайтесь, як працює ваш Google Shopping</span>
+            <a href="#blogLeadForm" class="sticky-cta-btn" onclick="document.getElementById('blogLeadForm').scrollIntoView({behavior:'smooth'});return false;">
+                Безкоштовний аналіз
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="padding: 3rem 0; text-align: center; color: var(--color-text-secondary); font-size: 0.875rem; border-top: 1px solid var(--color-border-light);">
+        <div class="container">
+            <p>&copy; 2026 GETPROFIT. Всі права захищені.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="/privacy-policy.html" style="color: var(--color-text-secondary);">Політика конфіденційності</a>
+                &middot;
+                <a href="/terms-and-conditions.html" style="color: var(--color-text-secondary);">Умови використання</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/blog.js"></script>
+</body>
+</html>
